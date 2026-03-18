@@ -11,7 +11,7 @@
   <nav>
     <div class="container nav-content">
       <a href="index.html" class="logo">Anurag Choudhary</a>
-      <div class="menu-toggle"onclick="toggleMenu()">&#9776;</div>
+      <div class="menu-toggle">&#9776;</div>
       <ul class="nav-links">
         <li><a href="index.html">About</a></li>
         <li><a href="education.html">Education</a></li>
@@ -46,8 +46,11 @@
   </section>
   <script> 
     function toggleMenu() {
+      const menuToggle = document.querySelector('.menu-toggle');
       const navlink = document.querySelector('.nav-links');
-      navlinks.classList.toggle('active');
+      menuToggle.addEventListner('click',()=>{
+         navlinks.classList.toggle('active');
+      });
     }
   </script>
 
